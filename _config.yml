@@ -1,5 +1,5 @@
 # Site Info
-title: dev blog
+title: rmcodestar.github.io
 tagline: 'DEV BLOG'
 description: ''
 baseurl: ""
@@ -33,7 +33,7 @@ author:
     # facebook:  <hide>
     #twitter:   https://twitter.com/Li_Zhihao
     #weibo:     http://weibo.com/41173780
-    email:     rmcodestar@naver.com
+    email:     mailto:rmcodestar@naver.com
 
 # Navigation (2nd level links supported)
 nav:
