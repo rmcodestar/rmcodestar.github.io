@@ -12,6 +12,7 @@ tag: [spring boot test, junit]
 * 비교할 출력을 OutputCapture의 인스턴스의  `toString`을 해서 가져올 수 있다.
 
 * [example](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-testing.html)
+
 ```java
 import org.junit.Rule;
 import org.junit.Test;
