@@ -2,7 +2,7 @@
 layout: post
 title: 소수판별법
 category: 알고리즘
-tag: 알고리즘 소수
+tag: [알고리즘, 소수]
 ---
 
 ## 소수 
