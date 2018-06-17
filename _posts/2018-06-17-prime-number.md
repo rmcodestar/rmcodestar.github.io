@@ -31,7 +31,7 @@ tag: [알고리즘, 소수]
 
 간단하게 알고리즘을 작성하면 아래와 같다.
 
-```Java
+```java
 public boolean isPrime(int N) {
     if(N <= 2) {
         return (N % 2 == 0); //1은 소수가 아니고, 2은 소수인 경우에 대한 예외처리
@@ -69,7 +69,7 @@ public boolean isPrime(int N) {
 
 간단하게 소스를 작성하면
 
-```Java
+```java
 public void printPrimeNumber(int from, int to) {
         List<Boolean> inputs = new ArrayList<>();
 
