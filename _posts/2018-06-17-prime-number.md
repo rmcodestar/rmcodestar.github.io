@@ -71,26 +71,26 @@ public boolean isPrime(int N) {
 
 ```java
 public void printPrimeNumber(int from, int to) {
-        List<Boolean> inputs = new ArrayList<>();
+        boolean[] primeNumbers = new boolean[to + 1];
 
-        for(int index = 0; index< 2; index++) {
-            inputs.add(false);
+        for(int index = 0; index < 2; index++) {
+            primeNumbers[index] = false;
         }
 
         for (int index = 2; index <= to; index++) {
-            inputs.add(true);
+            primeNumbers[index] = true;
         }
 
         for (int i = 2; i <= Math.sqrt(to); index++) {
-            if(isPrime(i) && inputs.get(i)) {
+            if(primeNumbers[i] && isPrime(i)) {
                 for(int j = 2; j * i <= to; j++) { //해당 숫자의 배수를 탐색 후보에서 제외
-                    inputs.set(j * i, false); 
+                    primeNumbers[j * i] = false; 
                 }
             }
         }
 
-        for(int index = from; index<=to; index++) {
-            if(inputs.get(index)) {
+        for(int index = from; index <= to; index++) {
+            if(primeNumbers[index]) {
                 System.out.println(index); // (from, to) 범위 내 소수 출력
             }
         }
