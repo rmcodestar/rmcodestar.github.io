@@ -1,8 +1,8 @@
 ---
 layout: post
 title: elasticSearch 설치하기
-category: elasticSearch
-tag: elasticSearch
+category: elastic search
+tag: elastic search
 ---
 
 ## elasticSearch 설치하기 앞서
