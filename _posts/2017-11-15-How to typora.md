@@ -23,16 +23,20 @@ tag: typora
   * bold : \*\*문구\*\* , ex. **진하게 보여주자**
   * Highlight : 
 
-* code 1줄은 `` `  를이용한다 `pringln(String string)` 
+* code 1줄은 `` ` `` (backtick) 를이용한다 `pringln(String string)` 
 
-* code 여러줄은 ```` `를 사용한다
+* code 여러줄은 `` ``` ``를 사용한다
 
   ```
   multi code line
   ```
+  
+코드 주석을 사용한 언어의 syntax 하이라이팅하고 싶다면 `` ``` ``바로 뒤에 사용한 언어를 써준다(ex. java, javascript, html)
 
-  ​
 
-  ​
+* 인용구
+인용구는  `>`를 사용한다
 
-  ​    
+> 이런식을 노출된다.
+>
+> 보통 인용할 때 사용한다
