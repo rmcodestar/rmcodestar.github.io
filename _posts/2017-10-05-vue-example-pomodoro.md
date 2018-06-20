@@ -201,3 +201,8 @@ vue2에서 양방향 바인딩이 안되므로 이벤트로 해결해야 한다.
 * 스타일 바인딩
 * 필터 사용하기
 * Cat api 연동하기
+
+***
+
+### [결과물](http://jsfiddle.net/rmcodestar/8hznuy6r/1/)
+<script async src="//jsfiddle.net/rmcodestar/8hznuy6r/embed/js,html,result/"></script>
