@@ -49,6 +49,6 @@ tail -f access.log.2018-06-17
 
 #### 특정 컬럼 출력 (`awk`이용)
 ```
-tail -f access.log.2018-06-17 | awk `{print $7, $9, $5}`
+tail -f access.log.2018-06-17 | awk '{print $7, $9, $5}'
 ```
 
