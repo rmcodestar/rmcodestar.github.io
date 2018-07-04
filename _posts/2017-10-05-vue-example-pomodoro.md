@@ -1,7 +1,7 @@
 ---
 layout: post
 title: VUE js를 이용하여 pomodoro 만들기
-category: vue
+category: vue.js
 tag: [vue.js]
 ---
 
