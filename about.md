@@ -23,7 +23,8 @@ title: About
 
 #### STUDY
 * elastic search
-
+* docker
+* redis
 
 
 
