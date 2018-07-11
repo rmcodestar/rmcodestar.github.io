@@ -92,15 +92,6 @@ USER patrick
 ```
 
 ### ARG
-* `FROM`명령하기 전 `ARG`명령어로 선언된 변수를 지원할 수 있음
-```
-ARG  CODE_VERSION=latest
-FROM base:${CODE_VERSION}
-CMD  /code/run-app
-
-FROM extras:${CODE_VERSION}
-CMD  /code/run-extras
-```
 * build 명령어를 실행할 때 추가로 입력을 받아 Dockerfile 내에서 사용될 변수의 값을 설정
 * 기본값을 지정할 수 도 있음
 ```
@@ -110,7 +101,9 @@ AGR my_value2:default_value
 
 RUN touch $my_arg/mydir
 ```
+
 * build 명령어를 실행할 때 `--build-arg` 옵션을 사용해 Dockerfile의 ARG를 입력할 수 있다
+
 ```
 # docker build --build-arg my_value=/home -t mybuild:0.0 ./
 ```
