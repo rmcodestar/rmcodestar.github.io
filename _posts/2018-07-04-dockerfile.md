@@ -94,6 +94,7 @@ USER patrick
 ### ARG
 * build 명령어를 실행할 때 추가로 입력을 받아 Dockerfile 내에서 사용될 변수의 값을 설정
 * 기본값을 지정할 수 도 있음
+
 ```
 FROM ubuntu:14.04
 ARG my_value
