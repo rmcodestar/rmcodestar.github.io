@@ -67,7 +67,18 @@ ADD test /absoluteDir/         # adds "test" to /absoluteDir/
 ### CMD
 * 컨테이너가 시작될 때마다 실행할 명령어(커맨드)를 설정
 * DcokerFile에서 한 번만 실행됨, 둘 이상 있을 경우 마지막 항목만 적용됨
+* `docker run`명령어의 이미지 이름 뒤에 입력하는 커맨드와 같은 역할
+  * Dockerfile의 `CMD`값은 `docker run`의 커맨드가 있을 경우 덮어쓰기 됨
+* 일반 형식과 배열 형식의 차이점
+```
+CMD echo test
+# --> /bin/sh -c echo test
+```
 
+```
+CMD ["echo", "test"]
+# --> echo test
+```
 
 ### ENV
 * Dockerfile에서 사용될 환경변수를 지정
@@ -111,7 +122,8 @@ RUN touch $my_arg/mydir
 
 ### ONBUILD
 * 빌드된 이미지를 기반으로 하는 다른 이미지가 Dockerfile로 생성될 때 실행할 명령어를 추가
-* 이는 다른 이미지를 빌드하기 위해 기본으로 사용될 이미지를 빌드하는 경우에 유용합니다.
+* 이는 다른 이미지를 빌드하기 위해 기본으로 사용될 이미지를 빌드하는 경우에 유용
+* 부모 이미지의 자식 이미지에만 적용, 자식 이미지는 `ONBUILD` 속성을 상속 받지 않음
 ```
 FROM ubuntu:14.04
 RUN echo "hello world"
@@ -126,7 +138,6 @@ FROM ubuntu:14.04
 STOPSIGNAL SIGKILL
 ```
 * `docker run` 명령어에서 `--stop-signal` 옵션으로 컨테이너에 개별적으로 설정할 수도 있다
-
 
 ### HEALTHCHECK
 * 이미지로부터 생성된 컨테이너에서 동작하는 애플리케이션의 상태를 체크하도록 설정
@@ -149,12 +160,20 @@ HEALTHCHECK --interval=1m --timeout=3s --retries=3 CMD curl -f http://localhost 
 ***
 
 ## Dockerfile 빌드
-```shell
-# docker build -t mybuild:0.0 ./
 ```
-* `-t` : 생성될 이미지의 이름을 설정하는 옵션
-* 인자에는 dockerfile이 저장된 경로를 입력함
+docker build [OPTIONS] PATH | URL | -
+```
+* 옵션
 
+|option|option shorthand|설명|
+| --- | --- | --- |
+|`--tag`|`-t`|`name:tag` 포맷으로 이미지 이름을 설정|
+|`--file`|`-f`|Dockerfile 이름 (디폴트 값 : `PATH/Dockerfile`)|
+
+* ex. 현재 디렉토리에 있는 `Dockerfile`을 이용하여 이미지 이름 `mybuild:0.0`를 빌드하는 예시
+```shell
+$ docker build -t mybuild:0.0 ./
+```
 
 ### `.dockerignore`
 * git의 `.gitignore`와 같은 기능
