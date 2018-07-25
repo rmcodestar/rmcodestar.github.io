@@ -7,8 +7,9 @@ tag : [docker]
 
 ## 도커 엔진 버전 확인
 ```shell
-docker version
+$docker version
 ```
+결과
 ```
 Docker version 18.03.1-ce, build 9ee9f40
 ```
