@@ -4,10 +4,18 @@ title: docker 명령어
 category: docker
 tag : [docker]
 ---
+## 도커 엔진 버전 확인
+```shell
+$ which docker
+```
+결과
+```
+/usr/local/bin/docker
+```
 
 ## 도커 엔진 버전 확인
 ```shell
-$docker version
+$ docker version
 ```
 결과
 ```
