@@ -7,7 +7,12 @@ tag : [docker]
 
 ## 도커 데몬이란?
 > 도커 엔진은 외부에서 API 입력을 받아 도커 엔진의 기능을 수행하는데, 도커 프로세스가 실행되어 서버로서 입력을 받을 준비가 된 상태를 도커 데몬이라 한다.
+
 * doc - [dockered](https://docs.docker.com/engine/reference/commandline/dockerd/)
+
+
+<br>
+
 
 ## 도커의 구조
 * 서버
