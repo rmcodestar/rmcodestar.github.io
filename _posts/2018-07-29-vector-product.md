@@ -5,7 +5,7 @@ category: 알고리즘
 tag: [알고리즘, CCW]
 ---
 
-# 벡터의 내적 (inner product)
+# 벡터의 내적 (Inner product)
 * scalar product 혹은 dot product라고도 함
 * 두 벡터의 내적의 결과는 스칼라 값
 * 𝐴 ⃗ = <𝑨𝒙, A𝒚>, 𝐵 ⃗ = <B𝒙, 𝑩𝒚>라 할 때
@@ -49,7 +49,7 @@ Q. 다각형의 넓이는 어떻게 구할까?
 
 ***
 
-# 벡터의 외적(cross product)
+# 벡터의 외적(Cross product)
 * 외적의 결과는 또 다른 벡터의 값
 * 𝐴 ⃗ = <𝑨𝒙, 𝑨𝒚, 𝑨𝒛>, 𝐵 ⃗ = <𝑩𝒙, 𝑩𝒚, 𝑩𝒛>일 때 
 
