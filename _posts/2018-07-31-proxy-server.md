@@ -2,23 +2,20 @@
 layout: post
 title: Proxy server란
 category: 네트워크
-tag: [proxy]
+tag: [네트워크, proxy]
 ---
 
 ## 프록시 서버란?
 > 서버와 클라이언트 사이에서 중계기로서 대리로 통신을 수행하는 기능을 가리켜 `프락시(proxy)`, 그 중계 기능을 하는 것을 `프락시 서버(proxy server)`라고 부른다.
 
-<br>
-
 ## 프록시 서버의 종류
 * Forward proxy server
 * Reverse proxy server ✨
-* open proxy server
+* Open proxy server
 
 <br>
 
 ***
-
 ## Forward proxy server
 ![forward proxy server](https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Forward_proxy_h2g2bob.svg/320px-Forward_proxy_h2g2bob.svg.png)
 
@@ -43,5 +40,5 @@ tag: [proxy]
 
 ***
 
-### reference
+## Reference
 * [wikipedia - proxy server](https://en.wikipedia.org/wiki/Proxy_server)
