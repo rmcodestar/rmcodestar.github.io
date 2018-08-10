@@ -38,14 +38,14 @@ tag: [알고리즘, CCW]
 * 𝐴 ⃗ = <𝑨𝒙, 𝑨𝒚, 𝑨𝒛>, 𝐵 ⃗ = <𝑩𝒙, 𝑩𝒚, 𝑩𝒛>일 때 
 
 ```
-𝐴 ⃗×𝐵 ⃗ = //TODO img
+𝐴 ⃗×𝐵 ⃗ = //TODO img 
 ```
 
 <br>
 
 ## 1. 벡터의 외적을 통해 `CCW`, `CW` 판단
 ![오른손 법칙](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Right_hand_rule_cross_product.svg/220px-Right_hand_rule_cross_product.svg.png)
-> 두 벡터의 외적(𝐴 ⃗×𝐵 ⃗)을 구하면 `오른손 법칙`을 이용하여 두 벡터의 방향을 구할 수 있다. 반시계방향(CCW)이거나 시계방향(CW)인지를 알 수 있다.
+> 두 벡터의 외적(𝐴 ⃗×𝐵 ⃗)을 구하면 `오른손 법칙`을 이용하여 두 벡터의 방향을 구할 수 있다. 반시계방향(CCW)이거나 시계방향(CW)인지를 알 수 있다.
 
 <br>
 
@@ -59,7 +59,7 @@ tag: [알고리즘, CCW]
 
 <br>
 
-## 3. 벡터의 을 통해 삼각형 넓이 구하기
+## 3. 벡터의 외적을 통해 삼각형 넓이 구하기
 평행사변형의 넓이 
 ```
 S = |𝐴 ⃗ x 𝐵 ⃗|
