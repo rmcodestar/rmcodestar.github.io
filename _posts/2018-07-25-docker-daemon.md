@@ -49,3 +49,30 @@ Server:
   OS/Arch:      linux/amd64
   Experimental: true
 ```
+
+## docker daemon monitoring
+
+### events
+```
+$ docker events
+```
+* 도커 데몬이 수행한 명령어의 결과를 실시간으로 볼 수 있다
+* `filter` 옵션을 사용하여 원하는 정보만 출력하도록 설정할 수 있다. `docker events --filter 'type=image'`
+* filter type 종류 : container, image, volume, network, plugin, daemon
+* example : `docker run hello-world`를 실행했을 때의 로그
+```
+2018-10-22T13:27:39.729138259+09:00 image pull hello-world:latest (name=hello-world)
+2018-10-22T13:27:39.873871091+09:00 container create 8dcc6169c9d946913d1036cc4582d4e5dca50b51ffc6a58523cb850975c64823 (image=hello-world, name=practical_saha)
+2018-10-22T13:27:39.879489387+09:00 container attach 8dcc6169c9d946913d1036cc4582d4e5dca50b51ffc6a58523cb850975c64823 (image=hello-world, name=practical_saha)
+2018-10-22T13:27:39.922456696+09:00 network connect b7f57edd9a193009ad3fc1d7ca132c55b1ec6edba5f87763b4c137212af8cbb6 (container=8dcc6169c9d946913d1036cc4582d4e5dca50b51ffc6a58523cb850975c64823, name=bridge, type=bridge)
+2018-10-22T13:27:40.379439879+09:00 container start 8dcc6169c9d946913d1036cc4582d4e5dca50b51ffc6a58523cb850975c64823 (image=hello-world, name=practical_saha)
+2018-10-22T13:27:40.502177141+09:00 container die 8dcc6169c9d946913d1036cc4582d4e5dca50b51ffc6a58523cb850975c64823 (exitCode=0, image=hello-world, name=practical_saha)
+2018-10-22T13:27:40.767295323+09:00 network disconnect b7f57edd9a193009ad3fc1d7ca132c55b1ec6edba5f87763b4c137212af8cbb6 (container=8dcc6169c9d946913d1036cc4582d4e5dca50b51ffc6a58523cb850975c64823, name=bridge, type=bridge)
+```
+
+### docker stats 
+```
+$ docker stats
+```
+* 실행 중인 모든 컨테이너의 자원 사용량을 스트림으로 출력
+* `--no-stream` : 스트림이 아닌 한 번만 출력하는 방식으로 보여주는 옵션
