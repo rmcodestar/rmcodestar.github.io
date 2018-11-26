@@ -5,10 +5,26 @@ category: 알고리즘
 ---
 
 ### 공부하고 싶은 내용
+#### 수학
+- [X] 소수 구하기
+- [X] 소인수분해
+- [ ] 진법 변환
+- [X] 팩토리얼
+- [X] 파스칼의 삼각형
+- [ ] 카탈란 수 
+- [X] 오일러 피 함수
+- [X] 확장 유클리드 함수
+
+#### 자료구조
+- [ ] disjoint set `#서로소집합`
+
 #### 그래프
+- [X] DFS, BFS
+- [X] 트리 순회, Preorder, postorder, inorder
 - [ ] Flood fill alogrithm --> 다차원 배열의 어떤 칸과 연결된 영역을 찾는 알고리즘 `#연결요소`
-- [ ] Lowest Common Ancestor (LCA) --> 가장 가까운 공통 조상 찾는 알고리즘
+- [X] Lowest Common Ancestor (LCA) `#가장 가까운 공통 조상 찾는 알고리즘`
 - [ ] `SCC` : Kosaju's Algorithm, Tarjan's Algorithm 
+- [ ] 2-SAT
 
 #### 구간트리
 - [X] segment tree
