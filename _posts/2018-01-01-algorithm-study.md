@@ -54,3 +54,8 @@ category: 알고리즘
 
 #### 보안
 - [X] [RSA 알고리즘](https://rmcodestar.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/2018/06/11/RSA/) `#확장된 유클리드 호제법`
+
+
+#### 확률
+- [ ] [하이퍼로그로그](https://d2.naver.com/helloworld/711301) #집합의 우너소 개수 추정
+- [ ] [Count-Min Sketch](https://d2.naver.com/helloworld/799782) - #빈도 추정 #확률적 자료구조
