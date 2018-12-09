@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Redis Persistence
+title: Redis replication
 category: REDIS
 tag: [REDIS,Redis replication]
 ---
