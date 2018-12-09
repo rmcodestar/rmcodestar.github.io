@@ -43,7 +43,7 @@ slave-priority 100
 <br/>
 
 
-### 선택) 비밀번호 설정
+### 비밀번호 설정
 master에 비밀번호 설정이 되어있다면 슬레이브도 설정해주어야한다.
 
 ```requirepass <password>```
