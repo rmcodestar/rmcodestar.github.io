@@ -100,7 +100,7 @@ registry.enableSimpleBroker("/chat", "/participants");
 
 `ApplicationDestinationPrefixes`를 지정하면 대상 헤더가 시작되는 STOMP 메시지는 해당 클래스의 메서드로 라우팅된다.
 
-
+<br>
 
 예를 들어 클라이언트가 SEND 프레임을 다음과 같이 보낼 때 
 
@@ -127,7 +127,7 @@ public class ChattingController {
 }
 ```
 
-
+<br>
 
 ## 2. @Controller에서 메시지 핸들링하기
 
@@ -138,9 +138,22 @@ Controller에서 아래의 두 어노테이션을 이용해서 메시지를 핸�
 
 <br>
 
-> @SubscribeMapping을 사용하면 메시지 브로커를 거치지 않고 데이터가 클라이언트에 직접 반환된다.
->
-> 그리고 @DestinationVariable을 지원한다.
+> 기본적으로 @SubscribeMapping 메서드의 반환값은 연결된 클라이언트에게 직접 메시지로 보내지며 브로커를 통과하지 않는다.
+
+<br>
+
+사용예제 : 클라이언트가 `/app/message`로 메시지를 보냈을 경우 
+
+```java
+@Controller
+public class ChattingController {
+
+    @MessageMapping("/message")
+    public void receiveMessage(@Payload ChattingMessage message) {
+        //TODO
+    }
+}
+```
 
 <br>
 
@@ -159,12 +172,12 @@ Controller에서 아래의 두 어노테이션을 이용해서 메시지를 핸�
 private SimpMessagingTemplate template;
 
 @RequestMapping("/greetings")
-public void greet(String message) {
-    template.convertAndSend("/chat/messages", message);
+public void greet(String greetingMessage) {
+    template.convertAndSend("/chat/message", greetingMessage);
 }
 ```
 
-`/chat/messages`를 구독하고 있는 클라이언트들에게 message가 보내지게 될 것이다.
+`/chat/message`를 구독하고 있는 클라이언트들에게 greetingMessage이 보내지게 될 것이다.
 
 <br>
 
