@@ -42,3 +42,4 @@ tag: [네트워크, proxy]
 
 ## Reference
 * [wikipedia - proxy server](https://en.wikipedia.org/wiki/Proxy_server)
+* [Forward Proxy vs Reverse Proxy](https://www.jscape.com/blog/bid/87783/Forward-Proxy-vs-Reverse-Proxy)
