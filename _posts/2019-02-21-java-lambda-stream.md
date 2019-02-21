@@ -115,7 +115,7 @@ public interface DoubleBinaryOperator {
 
 
 
-### 람다가 대체할 수 없는때
+### 람다로 대체할 수 없는 경우
 
 * `this` 키워드 용도가 다를 때, 함수 객체가 자신을 참조해야 할 때는 익명클래스를 사용
 
@@ -138,16 +138,11 @@ public interface DoubleBinaryOperator {
 map.merge(key, 1, (count, incr) -> count + incr);
 ```
 
-<br>
-
-
 [TO-BE] 메서드 참조(method reference)
 
 ```java
 map.merge(key, 1, Integer::sum)
 ```
-
-<br>
 
 
 [참고] `java.util.Map`
@@ -159,7 +154,7 @@ V merge(K key, V value, BiFunction<? super V, ? super V, ? extends V> remappingF
 <br>
 
 
-또 다른 예시
+**또 다른 예시**
 
 | 메서드 참조 유형   | 람다                                                     | 메서드 참조            |
 | ------------------ | -------------------------------------------------------- | ---------------------- |
@@ -178,9 +173,6 @@ V merge(K key, V value, BiFunction<? super V, ? super V, ? extends V> remappingF
 
 >  필요한 용도에 맞는 게 있다면, 직접 구현하지 말고 표준 함수형 인터페이스를 활용하라
 >
-
-<br>
-
 
 java.util.function 패키지에는 43 개의 인터페이스가 담겨 있다.
 
@@ -202,17 +194,12 @@ java.util.function 패키지에는 43 개의 인터페이스가 담겨 있다.
 
 
 
-* 기본 인터페이스는 primitive 타입인 `int`, `double`, `long`용으로 각 변형이 존재한다.
-
-  > `int`를 받는 `Predicate`는 `IntPredicate`, `long`이면 `LongPredicate`가 된다.
-  >
-  > reference 타입이면 그냥 기본 인터페이스가 제네릭이니까 그걸 쓰면 된다.ㅎ
+* 기본 인터페이스는 primitive 타입인 `int`, `double`, `long`용으로 각 변형이 존재한다. 
+  * ex. `IntPredicate`, `LongPredicate`
 
 * `Function` 인터페이스에는 기본 타입을 반환하는 변형이 총 9개 더 있다.
-
-  > 입력과 결과 타입이 모두 기본 타입이면 접두어로 `{Src}To{Result}`를 사용한다.
-  >
-  > `long`을 받아 `int`로 받환하면 `LongToIntFunction`이다
+  * 입력과 결과 타입이 모두 기본 타입이면 접두어로 `{Src}To{Result}`를 사용한다.
+  * `long`을 받아 `int`로 받환하면 `LongToIntFunction`이다
 
 * 기본 함수형 인터페이스 중 3개에는 인수를 2개씩 받는 변형이 있다.
   * `BiPredicate<T, U>`
@@ -222,15 +209,12 @@ java.util.function 패키지에는 43 개의 인터페이스가 담겨 있다.
 * `BooleanSupplier`인터페이스는 `boolean`을 받환하도록 한 `Supplier`의 변형이다
 
 
+***
 
 <br>
-
-***
 
 
 ## 스트림
-
-<br>
 
 ### 스트림은 주의해서 사용하라
 
