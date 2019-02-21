@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 자바 람다와 스트림
-category: JAVA
-tag: [lambda, stream]
+category: java
+tag: [lambda, stream, java]
 ---
 # 람다
 
