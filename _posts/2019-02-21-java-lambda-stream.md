@@ -240,7 +240,7 @@ java.util.function 패키지에는 43 개의 인터페이스가 담겨 있다.
 
 * 데이터 소스가 `Stream.iterate`거나 `limit`을 쓰면 성능을 기대하기 어렵다.
 * 병렬화의 효과가 좋았던 경우
-  * 대체로 스트림의 소스가 `ArrayList`, `HashMap`, `HashSet`, `ConcurrentHashMap`의 인스턴스일 때
+  * 스트림의 소스가 `ArrayList`, `HashMap`, `HashSet`, `ConcurrentHashMap`의 인스턴스일 때
   * 배열, int 범위, long 범위일 때
 * 종단 연산 중 병렬화에 가장 적합한 것은
   *  축소(reduction)이다 `reduce`, `max`, `min`, `sum`
