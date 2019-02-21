@@ -5,9 +5,6 @@ category: java
 tag: [lambda, stream, java]
 ---
 # 람다
-
-<br>
-
 ### 익명클래스의 인스턴스 대신 람다를 사용하자
 
 [AS-IS] 익명클래스의 인스턴스 사용
@@ -20,8 +17,6 @@ Collections.sort(words, new Comparator<String>() {
 });
 ```
 
-<br>
-
 
 [TO-BE] 람다 사용
 
@@ -29,16 +24,12 @@ Collections.sort(words, new Comparator<String>() {
 Collections.sort(words, (s1, s2) -> Integer.compare(s1.length(), s2.length()));
 ```
 
-<br>
-
-
 > 타입을 명시해야 코드가 더 명확할 때만 타입을 명시하고,
 >
 > 람다의 모든 매개변수 타입은 생략하자.(타입 추론)
 
 
 <br>
-
 
 
 ### enum을 이용한 상수별로 다르게 구현해야 하던 것을 람다로 대체할 수 있다
@@ -67,8 +58,6 @@ public enum Operation {
     public abstract double calculate(double x, double y);
 }
 ```
-
-<br>
 
 
 [TO-BE] 람다 사용
