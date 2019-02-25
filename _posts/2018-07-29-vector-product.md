@@ -37,9 +37,7 @@ tag: [알고리즘, CCW]
 * 외적의 결과는 또 다른 벡터의 값
 * 𝐴 ⃗ = <𝑨𝒙, 𝑨𝒚, 𝑨𝒛>, 𝐵 ⃗ = <𝑩𝒙, 𝑩𝒚, 𝑩𝒛>일 때 
 
-```
-𝐴 ⃗×𝐵 ⃗ = //TODO img 
-```
+![cross product](https://raw.githubusercontent.com/rmcodestar/rmcodestar.github.io/master/public/img/20180729_img_01.jpg)
 
 <br>
 
@@ -48,6 +46,15 @@ tag: [알고리즘, CCW]
 > 두 벡터의 외적(𝐴 ⃗×𝐵 ⃗)을 구하면 `오른손 법칙`을 이용하여 두 벡터의 방향을 구할 수 있다. 반시계방향(CCW)이거나 시계방향(CW)인지를 알 수 있다.
 
 <br>
+
+2차원에서는 z = 0이므로 위 외적 공식에서 z = 0을 대입하면 아래와 같이 나온다.
+![2d cross product](https://raw.githubusercontent.com/rmcodestar/rmcodestar.github.io/master/public/img/20180729_img_02.jpg)
+
+=> 오른속 법칙을 이용하여 `AxBy - AyBx`값을 가지고 두 벡터가 시계 방향인지 반시계 방향인지 알 수 있다. 
+
+* i) `AxBy - AyBx` > 0 -> CCW
+* ii) `AxBy - AyBx` < 0 -> CW
+
 
 ## 2. 벡터의 외적을 통해 두 선분의 교차여부를 판단
 **기본 아이디어**
