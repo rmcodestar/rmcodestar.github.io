@@ -246,3 +246,8 @@ java.util.function 패키지에는 43 개의 인터페이스가 담겨 있다.
   *  축소(reduction)이다 `reduce`, `max`, `min`, `sum`
   * 조건에 맞으면 바로 반환된는 메서드도 적합. `anyMatch`, `allMatch`, `noneMatch`
 * 계산도 올바로 수행하고 성능도 빨라질 거라는 확신 없이는 스트림 파이프라인 병렬화를 사용하지 말자
+
+<br>
+
+## Reference
+* [이펙티브 자바 Effective Java 3/E](http://www.yes24.com/Product/Goods/65551284?scode=032&OzSrank=1)
