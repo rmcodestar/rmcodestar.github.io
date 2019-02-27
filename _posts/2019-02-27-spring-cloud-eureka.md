@@ -1,4 +1,18 @@
+---
+layout: post
+title: 스프링 클라우드 유레카
+category: spring cloud
+tag: [spring, spring cloud, eureka]
+---
+
+
 ## Eureka 서버/클라이언트 실습
+
+
+### 유레카 (spring-cloud-starter-eureka) - 서비스 디스커버리
+* 클라이언트는 항상 애플리케이션의 일부로 원격의 디스커버리 서버에 연결하는 일을 한다.
+* 연결되면, 서비스 이름과 네트워크 위치를 담은 등록 메시지를 보낸다.
+
 
 spec
 * spring-boot : 2.1.2.RELEASE
