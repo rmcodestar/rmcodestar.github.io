@@ -60,7 +60,9 @@ pom.xml
 
 ## 서버 측에서 유레카 서버 실행하기
 * spring-cloud-stgarter-netflex-eureka-server 의존성 추가
-* 유레카 서버 활성화
+
+유레카 서버 활성화
+
 ```java
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -79,7 +81,7 @@ public class StudySpringCloudApplication {
 
 <BR>
 
-* 컨피규레이션 설정(application.properties)
+컨피규레이션 설정(application.properties)
 ```properties
 server.port=${PORT:8761}
 eureka.client.register-with-eureka=false
@@ -118,6 +120,7 @@ pom.xml
 <BR>
 
 * 서버측에서 서비스를 확인해보자
+
 http://localhost:8761/eureka/apps
 
 ```xml
