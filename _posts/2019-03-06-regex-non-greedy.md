@@ -5,7 +5,6 @@ category: 정규표현식
 tag: [정규표현식, non-greedy]
 ---
 
-# 정규표현식의 non-greedy 매칭
 
 greedy와 non-greedy 패턴 매칭의 차이는 무엇일까?
 
