@@ -23,12 +23,13 @@ tag: [java]
 
 아래 그림을 보면 이해가 쉬울 것이다. 
 
-따옴표로 생성한 s1와 new String해서 만든 s3가 가리키는 곳은 다르다.
+큰 따옴표로 생성한 s1와 new String해서 만든 s3가 가리키는 곳은 다르다.
 
 
 
 ![자바 스트링 풀](https://cdn.journaldev.com/wp-content/uploads/2012/11/String-Pool-Java1-450x249.png)
 
+> 이미지 참조 : https://www.journaldev.com/797/what-is-java-string-pool
 
 
 stirng pool에 동일한 문자열을 계속 저장하면 계속 추가될까? 만약 그렇다면 메모리 낭비일 것이다. 
