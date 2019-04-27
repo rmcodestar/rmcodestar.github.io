@@ -26,6 +26,9 @@ tag: [REDIS,Redis Persistence, AOF, RDB]
 * text파일이므로 편집이 가능하다.
 * rewrite 기능이 있음
 
+
+![AOF](https://raw.githubusercontent.com/rmcodestar/rmcodestar.github.io/master/public/img/20190427-aof.jpeg)
+
 <br/>
 
 **[복구시나리오]**  실수로 `FLUSHALL` 명령으로 메모리에 있는 데이터 전체를 날렸을 경우
@@ -131,6 +134,8 @@ Background append only file rewriting started
 ## RDB
 * RDB는 특정 시점의 메모리에 있는 데이터 전체를 바이너리 파일로 저장하는 것이다.
 * AOF 파일보다 사이즈가 작다. 따라서 로딩 속도가 AOF 보다 빠르다. 
+
+![RDB](https://raw.githubusercontent.com/rmcodestar/rmcodestar.github.io/master/public/img/20190427-rdb.jpeg)
 
 <br/>
 
