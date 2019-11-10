@@ -5,10 +5,6 @@ category: kafka
 tag: [kafka]
 ---
 
-
-
-# 카프카 훑어보기
-
 ### 왜 이름이 카프카인가?
 
 제이 크렙스(Jay Kreps)가 말하길..
