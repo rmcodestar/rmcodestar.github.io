@@ -38,7 +38,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 <br>
 
-* `Build and run using` : `Intellij IEDA`
 * `Run test using` : `Intellij IEDA`
 
 ***
