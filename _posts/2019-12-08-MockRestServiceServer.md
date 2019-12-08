@@ -89,7 +89,6 @@ public class UserServiceTest {
     @Test
     public void testcase1() throws JsonProcessingException {
         //Given
-        int id = 1;
         User expected = new User(1, "test");
         String responseJson = objectMapper.writeValueAsString(expected);
 
