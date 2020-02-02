@@ -5,10 +5,6 @@ category: java
 tag: [java, stream]
 ---
 
-# STEAM
-
-
-
 ## Steams in java
 
 Stream pipelines
