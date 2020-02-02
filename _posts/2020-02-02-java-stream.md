@@ -28,19 +28,19 @@ List<Integer> oddNumbers = numbers.stream()	                    // 스트림소�
 
 중간처리 종류
 
-* 필터링 - distinct, filter
-* 매핑 - map, flatMap, boxed
-* 정렬 - sorted
-* 루핑 - peek
+* 필터링 - `distinct`, `filter`
+* 매핑 - `map`, `flatMap`, `boxed`
+* 정렬 - `sorted`
+* 루핑 - `peek`
 
 <br>
 
 최종처리 종류
 
-* 매칭 - allMatch, anyMatch, noneMatch
-* 집계 - count, findFirst, max, min, average, reduce, sum
-* 루핑 - forEach
-* 수집 - collect
+* 매칭 - `allMatch`, `anyMatch`, `noneMatch`
+* 집계 - `count`, `findFirst`, `findAny`, `max`, `min`, `average`, `reduce`, `sum`
+* 루핑 - `forEach`
+* 수집 - `collect`
 
 <br>
 
