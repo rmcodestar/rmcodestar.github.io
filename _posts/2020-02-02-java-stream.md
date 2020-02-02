@@ -23,6 +23,7 @@ List<Integer> oddNumbers = numbers.stream()	                    // 스트림소�
                                   .collect(toList())          	// 최종 처리(collect)
 ```
 
+<br>
 
 
 중간처리 종류
@@ -32,7 +33,7 @@ List<Integer> oddNumbers = numbers.stream()	                    // 스트림소�
 * 정렬 - sorted
 * 루핑 - peek
 
-
+<br>
 
 최종처리 종류
 
@@ -41,7 +42,7 @@ List<Integer> oddNumbers = numbers.stream()	                    // 스트림소�
 * 루핑 - forEach
 * 수집 - collect
 
-
+<br>
 
 
 ## 사용예시
@@ -59,6 +60,8 @@ List<Integer> oddNumbers = numbers.stream()	                    // 스트림소�
 odds = [1,3,5,7,9]
 
 
+<br>
+
 
 ### Distinct
 
@@ -71,6 +74,9 @@ odds = [1,3,5,7,9]
 ```
 
  result = [1, 2, 3, 4, 5]
+
+
+<br>
 
 
 
@@ -89,6 +95,9 @@ takeWhile의 인자로 넘겨준 predicate가 처음 true로 준 아이템까지
  result = [1, 2, 3]
 
 
+<br>
+
+
 
 ### DropWhile
 
@@ -101,6 +110,9 @@ java9+,  나머지 요소를 선택하기 위해서는 dropWhile을 활용한다
 ```
 
  result = [4, 5, 6]
+
+
+<br>
 
 
 
@@ -124,6 +136,9 @@ java9+,  나머지 요소를 선택하기 위해서는 dropWhile을 활용한다
  result = [3, 4, 5]
 
 
+<br>
+
+
 
 ### Map 
 
@@ -136,6 +151,9 @@ List<String> userNames = users.stream()
 ```
 
 
+<br>
+
+
 
 ### FlatMap
 
@@ -143,10 +161,10 @@ List<String> userNames = users.stream()
 
 ```java
 List<String> inputs = List.of("ab", "cd");
-List<String> distinctStrings = inputs.stream()
-                                     .map(input -> input.split("")) //["a", "b"], ["c", "d"]
-  				                           .flatMap(Arrays::stream)       //"a", "b", "c", "d"
-                                     .collect(Collectors.toList())  //["a", "b", "c", "d"]
+List<String> outputs = inputs.stream()
+                             .map(input -> input.split("")) //["a", "b"], ["c", "d"]
+  				                   .flatMap(Arrays::stream)       //"a", "b", "c", "d"
+                             .collect(Collectors.toList())  //["a", "b", "c", "d"]
 ```
 
 
@@ -168,7 +186,11 @@ boolean result = IntStream.of(1, 2, 3, 4, 5, 6)
 
 
 
-`noneMatch(i -> i < 3)` 이었다면 요소 탐색시 요소 1일때 바로 불일치하므로 false를 리턴한게 된다. (short circuit)
+`noneMatch(i -> i < 3)` 이었다면 
+요소 탐색시 요소 1일때 바로 불일치하므로 false를 리턴한게 된다. (short circuit)
+
+
+<br>
 
 
 
@@ -182,6 +204,9 @@ boolean result = IntStream.of(1, 2, 3, 4, 5, 6)
 ```
 
 해당 경우는 모두 10보다 작으므로 result = true
+
+
+<br>
 
 
 
@@ -218,6 +243,9 @@ result.get()은 5이다.
 필터된 요소 중 [5, 4, 3] 맨 처음 요소는 5이기 때문.
 
 
+<br>
+
+
 
 ### FindAny
 
@@ -231,8 +259,6 @@ Optional<Integer> result = IntStream.of(1, 2, 3, 5, 4, 6)
 ```
 
 result.get()는 [5, 4, 6] 중 한 개가 리턴될 것이다.
-
-
 
 
 
@@ -266,6 +292,8 @@ int result = IntStream.of(1, 2, 3, 4, 5)
 
 
 
+<br>
+
 
 
 ### Sum, Min, Max
@@ -284,6 +312,8 @@ int max = IntStream.of(1, 2, 3, 4, 5)
 ```
 
 
+<br>
+
 
 reference 타입으로 해당 계산 API를 사용하고 싶다면 언박싱이 필요하다.
 
@@ -297,12 +327,6 @@ reference 타입으로 해당 계산 API를 사용하고 싶다면 언박싱이 
 
 
 ***
-
-
-
-
-
-
 
 ## 스트림 만들기
 
@@ -318,6 +342,8 @@ List<String> list = Stream.of("a", "b", "c")
 ```
 
 
+<br>
+
 
 ### 배열로 스트림 만들기
 
@@ -329,6 +355,8 @@ List<String> list = Arrays.stream(inputs)
                           .collect(Collectors.toList());
 ```
 
+
+<br>
 
 
 ### 무한 스트림 만들기
@@ -362,6 +390,8 @@ Stream.generate(Math::randam)
 ```
 
 
+
+<br>
 
 
 
