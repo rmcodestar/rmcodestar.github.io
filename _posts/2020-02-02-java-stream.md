@@ -410,3 +410,37 @@ Stream<String> property = value == null ? Stream.empty() : Stream.of(value);
 ```java
 Stream<String> property = Stream.ofNullable(value);
 ```
+
+***
+
+## 스트림 사용시 주의사항
+
+### 스트림은 주의해서 사용하라
+
+* 스프림 파이프라인은 지연평가다(lazy evaluation). 종단 연산을 빼먹는 일이 없도록 하자
+*  스트림을 과용하면 프로그램이 읽거나 유지보수하기 어려워진다.
+* 기본 타입인 char용 스트림을 지원하지 않는다.
+* `forEach` 연산은 스트림 계산 결과를 보고할 때만 사용하고, 계산하는 데는 쓰지 말자.
+* 스트림을 올바로 사용하려면 수집기를 잘 알아둬야 한다.
+
+<br>
+
+### 자바와 동시성 프로그래밍
+
+* 스레드, 동기화, wait/notify를 지원
+  * 자바 5 : `java.util.concurrent` 라이브러리와 실행자(`Executor`) 프레임워크 지원
+  * 자바 7 : 고성능 병렬 분해 프레임 워크인 포크-조인(`fork-join`) 패키지 추가
+  * 자바 8 : 병렬로 실행할 수 있는 스트림 지원, `parallel`
+
+<br>
+
+### 스트림 파이프라인 병렬화
+
+* 데이터 소스가 `Stream.iterate`거나 `limit`을 쓰면 성능을 기대하기 어렵다.
+* 병렬화의 효과가 좋았던 경우
+  * 스트림의 소스가 `ArrayList`, `HashMap`, `HashSet`, `ConcurrentHashMap`의 인스턴스일 때
+  * 배열, int 범위, long 범위일 때
+* 최종 처리 연산 중 병렬화에 가장 적합한 것은
+  * 축소(reduction)이다 - `reduce`, `max`, `min`, `sum`
+  * 조건에 맞으면 바로 반환된는 메서드도 적합. `anyMatch`, `allMatch`, `noneMatch`
+* 계산도 올바로 수행하고 성능도 빨라질 거라는 확신 없이는 스트림 파이프라인 병렬화를 사용하지 말자
