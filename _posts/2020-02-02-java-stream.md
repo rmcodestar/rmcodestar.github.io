@@ -159,7 +159,7 @@ List<String> userNames = users.stream()
 List<String> inputs = List.of("ab", "cd");
 List<String> outputs = inputs.stream()
                              .map(input -> input.split("")) //["a", "b"], ["c", "d"]
-  				                   .flatMap(Arrays::stream)       //"a", "b", "c", "d"
+                             .flatMap(Arrays::stream)       //"a", "b", "c", "d"
                              .collect(Collectors.toList())  //["a", "b", "c", "d"]
 ```
 
