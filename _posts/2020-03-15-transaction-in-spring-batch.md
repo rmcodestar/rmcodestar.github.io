@@ -14,24 +14,24 @@ tag: [spring, spring batch]
 
 
 ## Listeners
-- JobExecutionListener
+- JobExecutionListener  `#AbstractJob`
   - beforeJob
   - afterJob
-- StepExecutionListener
+- StepExecutionListener `#AbstractStep`
   - beforeStep
   - afterStep
-- ChunkListener
+- ChunkListener `#TaskletStep`
   - beforeChunk - 청크 트랜잭션 내부에서 실행
   - afterChunk - 청크 트랜잭션 외부에서 실행
-- ItemReadListener -  모두 청크 트랜잭션 내에서 실행
+- ItemReadListener -  모두 청크 트랜잭션 내에서 실행 `#ChunkProcessor`
   - beforeRead
   - afterRead
   - onReadError
-- ItemProcessListener - 모두 청크 트랜잭션 내에서 실행
+- ItemProcessListener - 모두 청크 트랜잭션 내에서 실행 `#ChunkProcessor`
   - beforeProcess
   - afterProcess
   - onProcessError
-- ItemWriteListener - 모두 청크 트랜잭션 내에서 실행
+- ItemWriteListener - 모두 청크 트랜잭션 내에서 실행 `#ChunkProcessor`
   - beforeWrite 
   - afterWrite
   - onWriteError
@@ -68,94 +68,7 @@ tag: [spring, spring batch]
 10. afterJob
 
 
-
-
-
-## 소스보기
-
-청크 단위의 작업이 일어나는 순서나 listener들이 호출되는 것을 소스단에서 확인하기 위해서 아래 소스부터 보면 좋다
-
-`TaskletStep.doExecute` (spring-batch-core-4.2-1-RELEASE 소스 기준)
-
-```java
-package org.springframework.batch.core.step.tasklet;
-
-public class TaskletStep extends AbstractStep {
-  protected void doExecute(StepExecution stepExecution) throws Exception {
-
-    ...생략...
-
-		stepOperations.iterate(new StepContextRepeatCallback(stepExecution) {
-
-			@Override
-			public RepeatStatus doInChunkContext(RepeatContext repeatContext, ChunkContext chunkContext)
-					throws Exception {
-
-				StepExecution stepExecution = chunkContext.getStepContext().getStepExecution();
-
-				// Before starting a new transaction, check for
-				// interruption.
-				interruptionPolicy.checkInterrupted(stepExecution);
-
-				RepeatStatus result;
-				try {
-					result = new TransactionTemplate(transactionManager, transactionAttribute)
-					.execute(new ChunkTransactionCallback(chunkContext, semaphore));
-				}
-				catch (UncheckedTransactionException e) {
-					// Allow checked exceptions to be thrown inside callback
-					throw (Exception) e.getCause();
-				}
-
-				chunkListener.afterChunk(chunkContext);
-
-				// Check for interruption after transaction as well, so that
-				// the interrupted exception is correctly propagated up to
-				// caller
-				interruptionPolicy.checkInterrupted(stepExecution);
-
-				return result == null ? RepeatStatus.FINISHED : result;
-			}
-
-		});
-
-	}
-```
-
-
-
-```java
-package org.springframework.transaction.support;
-
-public class TransactionTemplate extends DefaultTransactionDefinition implements TransactionOperations, InitializingBean {
-
-public <T> T execute(TransactionCallback<T> action) throws TransactionException {
-        Assert.state(this.transactionManager != null, "No PlatformTransactionManager set");
-        if (this.transactionManager instanceof CallbackPreferringPlatformTransactionManager) {
-            return ((CallbackPreferringPlatformTransactionManager)this.transactionManager).execute(this, action);
-        } else {
-            TransactionStatus status = this.transactionManager.getTransaction(this);
-
-            Object result;
-            try {
-                result = action.doInTransaction(status);
-            } catch (Error | RuntimeException var5) {
-                this.rollbackOnException(status, var5);
-                throw var5;
-            } catch (Throwable var6) {
-                this.rollbackOnException(status, var6);
-                throw new UndeclaredThrowableException(var6, "TransactionCallback threw undeclared checked exception");
-            }
-
-            this.transactionManager.commit(status);
-            return result;
-        }
-    }
-```
-
-
-
 ## Reference
-
+* https://docs.spring.io/spring-batch/docs/current-SNAPSHOT/reference/html/index.html
 * https://blog.codecentric.de/en/2012/03/transactions-in-spring-batch-part-1-the-basics/
 * https://blog.codecentric.de/en/2012/03/transactions-in-spring-batch-part-2-restart-cursor-based-reading-and-listeners/
