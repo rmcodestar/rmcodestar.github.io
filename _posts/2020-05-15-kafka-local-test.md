@@ -164,7 +164,7 @@ topic:test-topic	Partition: 3 Leader: 1001 Replicas: 1002,2 Isr : 1001,2
 
 
 #### Offset 조정하기
-
+단, 조정할 때 해당 consumer application 실행 중이면 안되므로 종료해야한다.
 ```shell
 $./kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group ${consumer-group} --topic ${topic} --reset-offsets {--to-earliest|--to-latest|--to-offset } --execute
 ```
@@ -190,7 +190,10 @@ TOPIC	PARTITION	NEW-OFFSET
 test-topic	0 1000
 ```
 
-
+아래와 같은 에러가 뜬다면 consumer 애플리케이션을 종료하고 시도하자.
+```
+ Error: Assignments can only be reset if the group 'test-consumer' is inactive, but the current state is Stable.
+```
 
 #### avro console consumer 사용하기
 
