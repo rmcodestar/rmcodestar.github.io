@@ -160,9 +160,9 @@ topic:test-topic	Partition: 3 Leader: 1001 Replicas: 1002,2 Isr : 1001,2
 ```
 
 #### 해당 토픽 파티션 개수 변경하기
-ex. partiions 0 -> 3
+ex. test 토픽의 partiions 3으로 변경
 ```shell
-$./kafka-topics.sh --bootstrap-server localhost:9092 --topic ${topic} --alter --partitions ${partitions_num}
+$./kafka-topics.sh --bootstrap-server localhost:9092 --topic test --alter --partitions 3
 ```
 
 
