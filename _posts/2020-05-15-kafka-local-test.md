@@ -53,8 +53,8 @@ kafka container 접속
 $ docker exec -it {kafka-docker_kafka container-id} /bin/bash
 ```
 
-* bin : kafka 관련 shell 있음
-* Kaka/kafka-log-{container-id} : offset, topic 로그가 있음
+* /opt/kafka/bin : kafka 관련 shell 있음
+* /kafka/kafka-log-{container-id} : offset, topic 로그가 있음
   * ex. `__consumer_offset_0`
 
 
@@ -159,11 +159,14 @@ topic:test-topic	Partition: 2 Leader: 5 Replicas: 5,1001 Isr : 5,1001
 topic:test-topic	Partition: 3 Leader: 1001 Replicas: 1002,2 Isr : 1001,2
 ```
 
+#### 해당 토픽 파티션 개수 변경하기
+ex. partiions 0 -> 3
+```shell
+$./kafka-topics.sh --bootstrap-server localhost:9092 --topic ${topic} --alter --partitions ${partitions_num}
+```
 
 
-
-
-#### Offset 조정하기
+#### 특정 consumer group Offset 조정하기
 단, 조정할 때 해당 consumer application 실행 중이면 안되므로 종료해야한다.
 ```shell
 $./kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group ${consumer-group} --topic ${topic} --reset-offsets {--to-earliest|--to-latest|--to-offset } --execute
