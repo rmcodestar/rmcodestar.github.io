@@ -21,12 +21,11 @@ public Step testStep() {
     return stepBuilderFactory.get("testStep")
             .<BatchRecord, BatchRecord>chunk(3)
             .faultTolerant()
-            .skip(IllegalArgumentException.class)
-            .skipLimit(3)
+            .skip(IllegalArgumentException.class) //IllegalArgumentException 발생 시 skip함
+            .skipLimit(3)  //최대 skip은 3번까지 허용
             .reader(batchRecordReader())
             .processor(batchRecordProcessor())
             .writer(batchRecordJpaItemWriter())
-            .transactionManager(new ResourcelessTransactionManager())
             .build();
 }
 ```
