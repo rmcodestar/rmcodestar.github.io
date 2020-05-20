@@ -84,9 +84,9 @@ public ItemProcessor<BatchRecord, BatchRecord> batchRecordProcessor() {
 <br>
 
 
-에러가 발생했던 chunk가 해당 아이템빤 빼고 processor에서 재처리가 되고 있었다.
+에러가 발생했던 chunk에서 이미 처리되었던 아이템 4가 processor에서 재처리가 되고 있었다.
 
-4, 6번은 총 2번 처리가 된 것이다.
+아이템 4은 총 2번 처리가 된 것이다.
 
 <br>
 
