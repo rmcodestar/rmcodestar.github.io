@@ -81,7 +81,7 @@ https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot
 
 **처방**
 
-local에서 사용하는 devtools dependecy를 삭제하여 해결!
+devtools dependecy를 삭제하여 해결!
 
 
 
