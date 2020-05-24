@@ -60,7 +60,7 @@ https://stackoverflow.com/questions/46848557/same-class-not-assignable-classload
 
 **spring boot devtools**
 
-devtools 에서는 `A base classloader`와 `A Retart classloader` 2개가의 클래스로더가 있고 애플리케이션에서 개발된 클래스는 `A restart classloader`를 사용한다.
+devtools 에서는 `A base classloader`와 `A Retart classloader` 2개의 클래스로더가 있고 애플리케이션에서 개발된 클래스는 `A restart classloader`를 사용한다.
 
 > Restart vs Reload
 >
