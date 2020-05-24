@@ -22,15 +22,15 @@ Schema version이 달라지면 어떻게 호환성이 관리될까?
 
 Confluent Schema Registry 기본 호환성 유형은 `BACKWARD`
 
-| Compatibility Type    | Changes allowed                           | Check against which schemas     | Upgrade first |
-| :-------------------- | :---------------------------------------- | :------------------------------ | :------------ |
-| `BACKWARD`            | Delete fields <br> Add optional fields          | Last version                    | `Consumers`   |
-| `BACKWARD_TRANSITIVE` | Delete fields <br> Add optional fields          | All previous versions           | `Consumers`   |
-| `FORWARD`             | Add fields <br> Delete optional fields          | Last version                    | `Producers`   |
-| `FORWARD_TRANSITIVE`  | Add fields <br> Delete optional fields          | All previous versions           | `Producers`   |
-| `FULL`                | Add optional fields <br> Delete optional fields | Last version                    | Any order     |
-| `FULL_TRANSITIVE`     | Add optional fields <br> Delete optional fields | All previous versions           | Any order     |
-| `NONE`                | All changes are accepted                  | Compatibility checking disabled | Depends       |
+| Compatibility Type    | Changes allowed                                   | Check against which schemas  | Upgrade first |
+| :-------------------- | :------------------------------------------------ | :--------------------------- | :------------ |
+| `BACKWARD`            | fields 삭제 가능 <br> optional fields 추가 가능       | 마지막 버전                     | `Consumers`   |
+| `BACKWARD_TRANSITIVE` | fields 삭제 가능 <br> optional fields 추가 가능       | 모든 이전 버전                   | `Consumers`   |
+| `FORWARD`             | fields 추가 가능 <br> optional fields 삭제 가능       | 마지막 버전                     | `Producers`   |
+| `FORWARD_TRANSITIVE`  | fields 추가 가능 <br> optional fields 삭제 가능       | 모든 이전 버전                   | `Producers`   |
+| `FULL`                | optional fields 추가 가능 <br> optional fields 삭제 가능| 마지막 버전                   | 순서 상관 없음    |
+| `FULL_TRANSITIVE`     | optional fields 추가 가능 <br> optional fields 삭제 가능| 모든 이전 버전                | 순서 상관 없음    |
+| `NONE`                | 모든 변경 사항이 가능함                                | 호환성 검사 비활성화              | Depends       |
 
 
 해당 스키마의 호환성 유형이 `BACKWARD`이라면 새 스키마를 사용하는 `Consumer`가 마지막 스키마로 생성 된 데이터를 읽을 수 있다.
