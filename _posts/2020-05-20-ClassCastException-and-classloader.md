@@ -13,11 +13,11 @@ tag: [삽질]
 
 confluent schema registry에 있는 스키마로 TestDomain을 java pojo로 역직렬화하여 카프카이벤트를 consume하는 개발을 하고있었다.
 
-```
- @KafkaListener(topics = "test-topic")
-    public void listen(ConsumerRecord<String, TestDomain> record) {
+```java
+@KafkaListener(topics = "test-topic")
+public void listen(ConsumerRecord<String, TestDomain> record) {
         testService.doAnything(record.value());
-    }
+}
 ```
 
 그런데 `ClassCastExeption`이 발생. (클래스명도 path도 동일한데 왜 캐스팅을 못하니 😭)
@@ -34,9 +34,9 @@ Caused by: java.lang.ClassCastException: com.study.domain.TestDomain cannot be c
 
 **나의 추측**
 
-1. `TestDomain` java를 못찾았다.
-2. `serialVersionUID`가 다른 객체
-3. `SpecipicRecord`가 아니라 `GenericRecord`라 casting이 안되었다.
+1. `TestDomain` java를 못찾았다. -> ❌ 그렇다면 에러 메시지가 달랐을 것
+2. `serialVersionUID`가 다른 객체 -> ❌ 
+3. `SpecipicRecord`가 아니라 `GenericRecord`라 casting이 안되었다. -> ❌ 디버깅시 해당 impl은 SpecipicRecord가 맞았다.
 
 <br>
 
