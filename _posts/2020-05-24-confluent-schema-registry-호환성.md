@@ -41,5 +41,6 @@ Confluent Schema Registry 기본 호환성 유형은 `BACKWARD`
 
 <br>
 
+
 **Reference**
 * [schema-evolution-and-compatibility](https://docs.confluent.io/current/schema-registry/avro.html#schema-evolution-and-compatibility)
