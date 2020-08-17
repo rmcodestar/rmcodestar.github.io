@@ -2,7 +2,7 @@
 layout: post
 title:  transaction in spring batch
 category: spring
-tag: [spring, spring batch]
+tag: [spring batch]
 ---
 
 
