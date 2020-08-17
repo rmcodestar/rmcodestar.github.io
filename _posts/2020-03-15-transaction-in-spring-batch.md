@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  transaction in spring batch
-category: spring
+category: spring batch
 tag: [spring batch]
 ---
 
