@@ -161,7 +161,7 @@ System.out.println("x : " + p.x());  // 5
 
 
 
-####Constructor
+#### Constructor
 
 모든 필드를 가지는 생성자 외에 다른 새 생성자도 만들 수 있다.
 
