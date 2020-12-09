@@ -4,6 +4,9 @@ title: docker 명령어
 category: docker
 tag : [docker]
 ---
+## Docker CLI
+https://docs.docker.com/engine/reference/commandline/docker/
+
 ## 도커 엔진 버전 확인
 ```shell
 $ which docker
@@ -55,3 +58,13 @@ docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
 ```
 * 대화식 프로세스 (예 : 쉘)의 경우, -i -t컨테이너 프로세스에 tty를 할당하기 위해 함께 사용해야합니다 . 
 * `--name` 옵션을 이용해 컨테이너명으로 실행할 컨테이너 찾음.
+
+
+### 컨테이너에서 /bin/bash 실행
+```
+docker exec -it CONTAINER /bin/bash
+```
+* execute an interactive bash shell on the container.
+* `--interactive , -i` : Keep STDIN open even if not attached
+* `--tty , -t` : Allocate a pseudo-TTY
+* 컨테이너에서 접속 종료할 뗀 `exec`
