@@ -9,7 +9,7 @@ tag: [kafka, avro]
 
 ## Backgroud
 
-https://www.baeldung.com/java-apache-avro
+[Guide to Apache Avro- baeldung](https://www.baeldung.com/java-apache-avro)
 
 <br>
 
@@ -242,7 +242,7 @@ Schema test = SchemaBuilder.record("TestRecord")
 
 
 #### Array 표현
-
+**example**
 ```java
 SchemaBuilder.record("TestRecord")
              .namespace("com.example.kafka")
