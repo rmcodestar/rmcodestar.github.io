@@ -203,8 +203,10 @@ test-topic	0 1000
 https://docs.confluent.io/1.0.1/quickstart.html
 
 
-
-...작성 중...
+ex.`testTopic`토픽 avro console consumer로 처음부터 구독하기
+```shell
+$./kafka-avro-console-consumer --topic {topicName} --bootstrap-server localhost:9092 --property schema.registry.url="{schemaRegistryUrl}" --from-beginning
+```
 
 
 
