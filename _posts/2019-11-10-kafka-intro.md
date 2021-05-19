@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 1. kafka 훍어보기
+title: kafka 훍어보기
 category: kafka
 tag: [kafka]
 ---
