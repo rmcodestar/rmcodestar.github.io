@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  kafka local에서 테스트 해보자
+title:  Kafka local에서 테스트 해보자
 category: kafka
 tag: [kafka, docker]
 ---
 
-## kafka 로컬 테스트
+## Kafka 로컬 테스트
 
 kafka document : https://kafka.apache.org/documentation/
 
