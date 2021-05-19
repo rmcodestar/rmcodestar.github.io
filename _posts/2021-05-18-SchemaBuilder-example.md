@@ -160,6 +160,8 @@ json
 
 혹은, nullable record를 생성하기 위핸 `SchemaBuilder.nullable().record`사용
 
+하위 레코드에 동일한 namespace를 설정하지 않으면 `namepspace: ""`로 출력되기도 하니 주의하자.
+
 **example**
 
 ```java
