@@ -1,8 +1,8 @@
 ---
 layout: post
 title: intellij junit5, gradle 환경에서 no tests found 에러
-category: etc
-tag: [etc]
+category: Intellij
+tag: [Intellij]
 ---
 
 
