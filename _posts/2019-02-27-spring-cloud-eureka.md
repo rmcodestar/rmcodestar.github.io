@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 스프링 클라우드 유레카
-category: spring cloud
-tag: [spring, spring cloud, eureka]
+category: Spring
+tag: [Spring, Spring cloud, Eureka]
 ---
 
 
