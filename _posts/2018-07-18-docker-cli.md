@@ -1,6 +1,6 @@
 ---
 layout: post
-title: docker 명령어
+title: Docker 명령어
 category: Docker
 tag : [Docker]
 ---
