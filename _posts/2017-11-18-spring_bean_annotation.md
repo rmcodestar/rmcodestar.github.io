@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bean inject Annotation
-category: Backend, Spring
+category: Spring
 tag: Spring
 ---
 ## Spring
