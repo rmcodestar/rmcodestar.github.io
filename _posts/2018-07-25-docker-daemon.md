@@ -1,6 +1,6 @@
 ---
 layout: post
-title: docker 데몬
+title: Docker 데몬
 category: Docker
 tag : [Docker]
 ---
