@@ -1,8 +1,8 @@
 ---
 layout: post
 title: java stream
-category: java
-tag: [java, stream]
+category: Java
+tag: [Java, Stream]
 ---
 
 ## Steams in java
