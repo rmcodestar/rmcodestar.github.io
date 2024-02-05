@@ -1,8 +1,8 @@
 ---
 layout: post
 title: docker 데몬
-category: docker
-tag : [docker]
+category: Docker
+tag : [Docker]
 ---
 
 ## 도커 데몬이란?
