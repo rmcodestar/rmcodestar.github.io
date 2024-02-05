@@ -22,30 +22,24 @@ title: Blog
     <article>
       {{ post.excerpt | markdownify }}
     <article>
-    <div class="post-more">
-      {% if site.disqus_short_name %}
-      <a href="{{ site.baseurl }}{{ post.url }}#disqus_thread"> <i class="fa fa-comments" aria-hidden="true"></i>Comment</a>&nbsp;
-      {% endif %}
-      <a href="{{ site.baseurl }}{{ post.url }}"><i class="fa fa-plus-circle" aria-hidden="true"></i>Read more</a>
-    </div>
   </div>
   {% endfor %}
 </div>
 
 <div class="pagination">
   {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}/blog/page{{paginator.next_page}}">Older</a>
+    <a class="pagination-item older" href="{{ site.baseurl }}/blog/page{{paginator.next_page}}">다음 페이지</a>
   {% else %}
-    <span class="pagination-item older">Older</span>
+    <span class="pagination-item older">다음 페이지</span>
   {% endif %}
   {% if paginator.previous_page %}
     {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}/blog/">Newer</a>
+      <a class="pagination-item newer" href="{{ site.baseurl }}/blog/">이전 페이지</a>
     {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}/blog/page{{paginator.previous_page}}">Newer</a>
+      <a class="pagination-item newer" href="{{ site.baseurl }}/blog/page{{paginator.previous_page}}">이전 페이지</a>
     {% endif %}
   {% else %}
-    <span class="pagination-item newer">Newer</span>
+    <span class="pagination-item newer">이전 페이지</span>
   {% endif %}
 </div>
 
