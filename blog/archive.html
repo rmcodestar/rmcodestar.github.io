@@ -14,7 +14,7 @@ title: archive
                 </a>
                 {% if post.categories %}
                 {% for tag in post.categories %}
-                <small><a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a></small>
+                <small><a href="{{ site.baseurl }}{{ site.category_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a></small>
                 {% endfor %}
                 {% endif %}
             </li>
