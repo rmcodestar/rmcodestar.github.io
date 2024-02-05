@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Java Record
-tag: jdk14
+category: Java
+tag: [Java, Record]
 ---
 
 
