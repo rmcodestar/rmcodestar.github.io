@@ -1,8 +1,8 @@
 ---
 layout: post
 title: MockRestServiceServer를 이용한 restTemplate Test
-category: spring
-tag: spring, test
+category: Spring
+tag: [Spring, Junit]
 ---
 
 ### MockRestServiceServer
