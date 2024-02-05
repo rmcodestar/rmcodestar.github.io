@@ -1,8 +1,8 @@
 ---
 layout: post
 title: java lambda
-category: java
-tag: [lambda, java]
+category: Java
+tag: [Java, Lambda]
 ---
 # 람다
 ### 익명클래스의 인스턴스 대신 람다를 사용하자
