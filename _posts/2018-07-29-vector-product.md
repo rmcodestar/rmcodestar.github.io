@@ -2,7 +2,7 @@
 layout: post
 title: Vector의 내적과 외적
 category: 알고리즘
-tag: [알고리즘, CCW]
+tag: [알고리즘, CCW, Vector]
 ---
 
 # 벡터의 내적 (Inner product)
