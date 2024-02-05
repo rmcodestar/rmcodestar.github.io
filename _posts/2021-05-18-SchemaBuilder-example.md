@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  SchemaBuilder로 avro 스키마 생성하기
-category: avro
-tag: [kafka, avro]
+category: Kafka
+tag: [Kafka, Avro]
 ---
 
 
