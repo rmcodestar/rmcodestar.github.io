@@ -1,8 +1,8 @@
 ---
 layout: post
-title: spring batch skip과 processorTransactional
-category: spring batch
-tag: [spring batch, processorTransactional]
+title: Spring batch skip과 processorTransactional
+category: Spring
+tag: [Spring, Spring batch, processorTransactional]
 ---
 
 <br>
