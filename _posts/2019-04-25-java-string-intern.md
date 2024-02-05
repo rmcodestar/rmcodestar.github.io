@@ -1,8 +1,8 @@
 ---
 layout: post
-title: java string intern
-category: java
-tag: [java]
+title: Java string intern
+category: Java
+tag: [Java, String intern]
 ---
 
 ## String intern이란?
