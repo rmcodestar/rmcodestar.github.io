@@ -1,6 +1,6 @@
 ---
 layout: post
-title: java lambda
+title: Java lambda
 category: Java
 tag: [Java, Lambda]
 ---
