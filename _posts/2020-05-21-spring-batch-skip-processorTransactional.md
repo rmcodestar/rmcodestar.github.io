@@ -243,5 +243,5 @@ Executing step: [testStep]
 
 
 
-#### Reference
+### Reference
 - https://blog.codecentric.de/en/2012/03/transactions-in-spring-batch-part-3-skip-and-retry
