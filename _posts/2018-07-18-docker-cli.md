@@ -7,7 +7,7 @@ tag : [Docker]
 ## Docker CLI
 https://docs.docker.com/engine/reference/commandline/docker/
 
-## 도커 위치 확인
+## 도커 위치 확인
 ```shell
 $ which docker
 ```
