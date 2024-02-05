@@ -2,7 +2,7 @@
 layout: post
 title:  Transaction in spring batch
 category: Spring
-tag: [Spring batch]
+tag: [Spring, Spring batch]
 ---
 ## Chunk processing flow
 ![img](https://www.codecentric.de/_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2Foutput%3Dformat%3Awebp%2F2dOPPFENSg65r7ZfsEo3&w=1920&q=75)
