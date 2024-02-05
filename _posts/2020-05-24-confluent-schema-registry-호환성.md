@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  confluent schema registry의 schema 호환성
-category: kafka
-tag: [kafka, confluent schema registry]
+category: Kafka
+tag: [Kafka, confluent schema registry]
 ---
 
 
