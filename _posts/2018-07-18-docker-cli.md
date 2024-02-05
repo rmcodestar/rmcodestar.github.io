@@ -1,8 +1,8 @@
 ---
 layout: post
 title: docker 명령어
-category: docker
-tag : [docker]
+category: Docker
+tag : [Docker]
 ---
 ## Docker CLI
 https://docs.docker.com/engine/reference/commandline/docker/
