@@ -2,6 +2,7 @@
 layout: post
 title: 알고리즘 공부 계획
 category: 알고리즘
+tag: 알고리즘
 ---
 
 ## 공부하고 싶은 내용
