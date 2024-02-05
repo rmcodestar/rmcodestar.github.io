@@ -1,21 +1,15 @@
 ---
 layout: post
-title: elasticSearch 설치하기
-category: elastic search
-tag: elastic search
+title: Elasticsearch 설치하기
+category: Backend
+tag: Elasticsearch
 ---
 
-## elasticSearch 설치하기 앞서
-
+### elasticSearch 설치하기 앞서
 * elasicsearch : 5.6.3
 * required : JDK1.7+
 
-
-
-
-
-## brew를 이용해서 설치하기
-
+### brew를 이용해서 설치하기
 ```Sh
 $ brew install elasticsearch
 ```
@@ -55,7 +49,7 @@ Or, if you don't want/need a background service you can just run:
 
 
 
-## elasticsearch 실행해보기
+### elasticsearch 실행해보기
 
 * run elasticsearch 
 
@@ -85,9 +79,9 @@ Or, if you don't want/need a background service you can just run:
 
 
 
-## 설치가 되었는지 테스트 해보기
+### 설치가 되었는지 테스트 해보기
 
-### sample 다운로드하기
+#### sample 다운로드하기
 
 download test data and sh : https://github.com/dakrone/elasticsearch-in-action
 
@@ -98,7 +92,7 @@ $ elasticsearch-in-action/populate.sh
 
 
 
-### search test
+#### search test
 
 elasticsearch가 제대로 동작했는지 알아보기 위해서 아래 url를 호출해보자
 
@@ -139,6 +133,6 @@ elasticsearch가 제대로 동작했는지 알아보기 위해서 아래 url를 
 
 
 
-## 모니터링해보기
+### 모니터링해보기
 
 chome의 elasticsearch head 확장 플러그인을 이용하여 모니터링을 할 수 있다
