@@ -25,7 +25,7 @@ version: 1.0.0
 # About/contact
 author:
   name: rmcodestar
-  description: JAVA / JAVASCRIPT / VUE JS
+  description: Backend developer
   gravatar: 3c2986ad7ac1f2230ea3596f44563328 # md5 hash of your email address
   contact:
     #linkedin:  https://www.linkedin.com/in/lizhihao
@@ -43,8 +43,10 @@ nav:
     - '/blog/'
     - { Categories: '/blog/categories/' }
     - { Tags: '/blog/tags/' }
-  About:          
-    - '/about/'
+  Category:          
+    - '/blog/categories/'
+  Tags:
+    - '/blog/tags/'
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
