@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  Kafka local에서 테스트 해보자
-category: kafka
-tag: [kafka, docker]
+category: Kafka
+tag: [Kafka, Docker]
 ---
 
 ## Kafka 로컬 테스트
