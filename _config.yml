@@ -41,12 +41,14 @@ nav:
     - '/'
   Blog:           
     - '/blog/'
-    - { Categories: '/blog/categories/' }
-    - { Tags: '/blog/tags/' }
-  Category:          
+#    - { Categories: '/blog/categories/' }
+#    - { Tags: '/blog/tags/' }
+  Category:
     - '/blog/categories/'
   Tags:
     - '/blog/tags/'
+  Archive:
+    - '/blog/archive/'
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'

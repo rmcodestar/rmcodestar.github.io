@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: archive
 ---
 
@@ -12,9 +12,9 @@ title: archive
                     <small>{{ post.title }}</small>
                     <small class="post-date">{{ post.date | date: "%F" }}</small>
                 </a>
-                {% if post.categories %} |
+                {% if post.categories %}
                 {% for tag in post.categories %}
-                <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
+                <small><a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a></small>
                 {% endfor %}
                 {% endif %}
             </li>
