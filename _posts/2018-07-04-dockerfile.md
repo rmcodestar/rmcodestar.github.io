@@ -1,15 +1,15 @@
 ---
 layout: post
 title: DockerFile
-category: docker
-tag : [docker]
+category: Docker
+tag : [Docker]
 ---
 
 ## DockerFile
 * 컨테이너에서 수행해야할 작업을 명시
-* Doc : https://docs.docker.com/engine/reference/builder/
+* Document: https://docs.docker.com/engine/reference/builder/
 
-## Format
+### Format
 ```
 # Comment
 INSTRUCTION arguments
