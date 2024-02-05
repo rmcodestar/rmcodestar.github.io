@@ -5,8 +5,7 @@ category: Spring
 tag: [Spring, Spring batch, processorTransactional]
 ---
 
-<br>
-
+### Spring batch에서의 skip 기능에 대한 오해
 spring batch 에서 특정 exception 발생시 발생한 아이템을 skip할 수 있는 기능이 있다.
 
 바로 아래처럼 사용할 수 있는데 테스트하다가 내 예상과 다르게 동작하는 부분이 있었다.
@@ -128,18 +127,18 @@ Executing step: [testStep]
 <br>
 
 
-**왜 이렇게 동작하는 것일까?**
+### 왜 이렇게 동작하는 것일까? 🤔
 
 chunk내에서 exception이 발생하면 transaction rollback을 하고 다시 processor-writer를 수행하게 된다.
 
 processor안에서도 db작업을 했을 수도 있기 때문에 다시 수행하는 로직에 processor도 포함이 되어있는 것이다.
 
-![transaction](https://blog.codecentric.de/files/2012/03/Blog_Transactions_SkipInProcess-1024x460.png)
+![transaction](https://www.codecentric.de/_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2Foutput%3Dformat%3Awebp%2F2dOPPFENSg65r7ZfsEo3&w=1920&q=75)
 
 <br>
 
 
-**processorTransactional**
+### 해결방법: processorTransactional 적용 💡
 
 `FaultTolerantChunkProcessor` 에서 아래 로직이 수행되고
 
@@ -244,6 +243,5 @@ Executing step: [testStep]
 
 
 
-### reference
-
-https://blog.codecentric.de/en/2012/03/transactions-in-spring-batch-part-3-skip-and-retry/
+#### Reference
+- https://blog.codecentric.de/en/2012/03/transactions-in-spring-batch-part-3-skip-and-retry
