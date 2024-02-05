@@ -1,17 +1,11 @@
 ---
 layout: post
-title:  transaction in spring batch
-category: spring batch
-tag: [spring batch]
+title:  Transaction in spring batch
+category: Spring
+tag: [Spring batch]
 ---
-
-
-
-## chunk processing flow
-
-![img](https://blog.codecentric.de/files/2012/03/Blog_Transactions_Listeners-1024x528.png)
-
-
+## Chunk processing flow
+![img](https://www.codecentric.de/_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2Foutput%3Dformat%3Awebp%2F2dOPPFENSg65r7ZfsEo3&w=1920&q=75)
 
 ## Listeners
 - JobExecutionListener  `#AbstractJob`
@@ -70,5 +64,6 @@ tag: [spring batch]
 
 ## Reference
 * https://docs.spring.io/spring-batch/docs/current-SNAPSHOT/reference/html/index.html
-* https://blog.codecentric.de/en/2012/03/transactions-in-spring-batch-part-1-the-basics/
-* https://blog.codecentric.de/en/2012/03/transactions-in-spring-batch-part-2-restart-cursor-based-reading-and-listeners/
+* https://www.codecentric.de/wissens-hub/blog/transactions-in-spring-batch-part-1-the-basics
+* https://www.codecentric.de/wissens-hub/blog/transactions-in-spring-batch-part-2-restart-cursor-based-reading-and-listeners
+* https://www.codecentric.de/wissens-hub/blog/transactions-in-spring-batch-part-3-skip-and-retry
