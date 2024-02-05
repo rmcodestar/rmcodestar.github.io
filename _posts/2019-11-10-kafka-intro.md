@@ -1,8 +1,8 @@
 ---
 layout: post
-title: kafka 훍어보기
-category: kafka
-tag: [kafka]
+title: Kafka 훍어보기
+category: Kafka
+tag: [Kafka]
 ---
 
 ### 왜 이름이 카프카인가?
