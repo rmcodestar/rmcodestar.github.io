@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Spring websocket으로 간단 채팅 프로그램 만들기
-category: websocket
-tag: [spring websocket, STOMP, sockjs]
+category: Spring
+tag: [Spring, Websocket, STOMP, sockjs]
 ---
 
 # Spring websocket으로 채팅만들기
