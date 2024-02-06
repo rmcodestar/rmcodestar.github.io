@@ -5,8 +5,7 @@ category: Kafka
 tag: [Kafka, confluent schema registry]
 ---
 
-
-**궁금증**
+###궁금증
 
 Schema version이 달라지면 어떻게 호환성이 관리될까? 
 
@@ -18,7 +17,7 @@ Schema version이 달라지면 어떻게 호환성이 관리될까?
 
 <br>
 
-**호환성 유형**
+### 호환성 유형
 
 Confluent Schema Registry 기본 호환성 유형은 `BACKWARD`
 
@@ -42,5 +41,5 @@ Confluent Schema Registry 기본 호환성 유형은 `BACKWARD`
 <br>
 
 
-**Reference**
+### Reference
 * [schema-evolution-and-compatibility](https://docs.confluent.io/current/schema-registry/avro.html#schema-evolution-and-compatibility)
