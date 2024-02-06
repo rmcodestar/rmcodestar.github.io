@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Avro desrialize 도중 ClassCastException 오류
+title: Avro desrialize 도중 ClassCastException 오류
 category: Spring
 tag: [삽질, Spring, Java]
 ---
