@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Avro desrialize 도중 ClassCastException 오류
+title: Avro deserialize 도중 ClassCastException 오류
 category: Spring
 tag: [삽질, Spring, Java]
 ---
@@ -69,22 +69,14 @@ devtools 에서는 `A base classloader`와 `A Retart classloader` 2개의 클래
 
 https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-devtools-restart
 
+그래서 avro deserializer에서 사용한 클래스로더와 애플리케이션 내 ListenContainer에서 해당 클래스를 로더한 클래스로더가 달랐던 게 아닐까?
 
 <br>
 
 
 #### 해결방법
 
-그래서 avro desrializer에서 사용한 클래스로더와 애플리케이션 내 ListenContainer에서 해당 클래스를 로더한 클래스로더가 달랐던 게 아닐까?
-
-<br>
-
-
-**처방**
-
 devtools dependecy를 삭제하여 해결!
-
-
 
 <br>
 
