@@ -54,7 +54,7 @@ default boolean isEqual(ChronoZonedDateTime<?> other) {
 
 `equals`의 경우 ZonedDateTime의 구성요소인 `LocalDateTime`, `ZoneOffset`, `ZoneId`가 모두 일치해야 같다고 판단합니다.
 
-`isEqual`의 경우 Ephoch 시간을 가지고만 비교를 합니다.
+`isEqual`의 경우 Epoch 시간을 가지고만 비교를 합니다.
 
 > epoch란 1970년 1월 1일 00:00:00 협정 세계시(UTC) 부터의 경과 시간을 초로 환산하여 정수로 나타낸 값
 
@@ -65,11 +65,11 @@ public void testcase1() {
     var zonedDateTime1 = ZonedDateTime.of(today, ZoneOffset.of("+09:00")); //ZoneId=+09:00
     var zonedDateTime2 = ZonedDateTime.of(today, ZoneId.of("Asia/Seoul")); //ZoneId=Asia/Seoul
 
-    assertEquals(zonedDateTime1.equals(zonedDateTime2), false); //Ephoch 시간이 같더라도 zoneId가 다르기 때문에 다르다고 판단
+    assertEquals(zonedDateTime1.equals(zonedDateTime2), false); //Epoch 시간이 같더라도 zoneId가 다르기 때문에 다르다고 판단
     assertEquals(zonedDateTime1.isEqual(zonedDateTime2), true);
 }
 ```
-같은 Ephoch 시간인지를 판단하고자 하려면 `isEqual`을 쓰는 것이 의도가 맞습니다.
+같은 Epoch 시간인지를 판단하고자 하려면 `isEqual`을 쓰는 것이 의도가 맞습니다.
 
 아니면 `Instant`객체로 변환하거나, 동일한 `ZoneId`로 변환한 후 `equals`를 쓰는 것도 방법이 될 수 있습니다.
 
