@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  ClassCastException 삽질
-category: 삽질
-tag: [삽질]
+title:  Avro desrialize 도중 ClassCastException 오류
+category: Spring
+tag: [삽질, Spring, Java]
 ---
 
 ### ClassCastException 삽질..
 
 <br>
 
-#### **문제상황**
+#### 문제상황
 
 confluent schema registry에 있는 스키마로 TestDomain을 java pojo로 역직렬화하여 카프카이벤트를 consume하는 개발을 하고있었다.
 
@@ -32,7 +32,7 @@ Caused by: java.lang.ClassCastException: com.study.domain.TestDomain cannot be c
 
 <br>
 
-**나의 추측**
+#### 나의 추측
 
 1. `TestDomain` java를 못찾았다. -> ❌ 그렇다면 에러 메시지가 달랐을 것
 2. `serialVersionUID`가 다른 객체 -> ❌ 
@@ -41,6 +41,7 @@ Caused by: java.lang.ClassCastException: com.study.domain.TestDomain cannot be c
 <br>
 
 
+#### 원인
 **방황 중에 발견한 강같은 글**
 
 https://stackoverflow.com/questions/46848557/same-class-not-assignable-classloader-for-same-class-different
@@ -72,7 +73,7 @@ https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot
 <br>
 
 
-**결론**
+#### 해결방법
 
 그래서 avro desrializer에서 사용한 클래스로더와 애플리케이션 내 ListenContainer에서 해당 클래스를 로더한 클래스로더가 달랐던 게 아닐까?
 
@@ -88,7 +89,7 @@ devtools dependecy를 삭제하여 해결!
 <br>
 
 
-**참고**
+### 참고글
 
 검색해보니 동일한 경험?을 한 글이 있었다
 
