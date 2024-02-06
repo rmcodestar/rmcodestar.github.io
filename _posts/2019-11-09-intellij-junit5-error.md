@@ -1,8 +1,8 @@
 ---
 layout: post
 title: intellij junit5, gradle 환경에서 no tests found 에러
-category: [ETC, 개발환경]
-tag: [Intellij]
+category: [ETC]
+tag: [Intellij, 개발환경]
 ---
 
 
