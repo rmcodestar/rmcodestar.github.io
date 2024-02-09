@@ -22,7 +22,7 @@ title: Blog
     <article class="post-article">
       <div class="toc">
         <a href="#"><b>Contents</b></a>
-        {% include toc.html html=content %}
+        {% include toc.html html=post.excerpt | markdownify %}
       </div>
       {{ post.excerpt | markdownify }}
     <article>
