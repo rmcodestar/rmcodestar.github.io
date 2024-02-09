@@ -7,17 +7,17 @@ title: archive
     <div class="tags-expo-section">
         <ui class="tags-expo-posts">
             {% for post in site.posts %}
-            <li>
-                <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+            <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+                <li>
                     <small>{{ post.title }}</small>
                     <small class="post-date">{{ post.date | date: "%F" }}</small>
-                </a>
-                {% if post.categories %}
-                {% for tag in post.categories %}
-                <small><a href="{{ site.baseurl }}{{ site.category_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a></small>
-                {% endfor %}
-                {% endif %}
-            </li>
+                    {% if post.categories %}
+                    {% for tag in post.categories %}
+                    <small><a href="{{ site.baseurl }}{{ site.category_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a></small>
+                    {% endfor %}
+                    {% endif %}
+                </li>
+            </a>
             {% endfor %}
         </ui>
     </div>
